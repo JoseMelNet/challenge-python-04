@@ -1,22 +1,30 @@
 def div(func):
-    # You have to code here!
-    pass
+    def new_function(*args, **kwargs):
+        hypertext = '<div>'+ func(*args, **kwargs) +'</div>'
+        return hypertext
+    return new_function
 
 
 def article(func):
-    # You have to code here!
-    pass
+    def new_function(*args, **kwargs):
+        hypertext = '<article>'+ func(*args, **kwargs) +'</article>'
+        return hypertext
+    return new_function
 
 
 def p(func):
-    # You have to code here!
-    pass
+    def new_function(*args, **kwargs):
+        hypertext = '<p>'+ func(*args, **kwargs) +'</p>'
+        return hypertext
+    return new_function
 
 
 # Here you must apply the decorators, uncomment this later
-# @div
-# @article
+
+
 # @p
+# @div
+@article
 def saludo(nombre):
     return f'¡Hola {nombre}, ¿Cómo estás?'
 
